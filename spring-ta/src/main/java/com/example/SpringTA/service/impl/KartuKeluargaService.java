@@ -33,6 +33,18 @@ public class KartuKeluargaService implements IKartuKeluargaService {
 		return kartukeluargaRepository.deleteKartuKeluarga(id);
 	}
 	
+	@Override
+	public KartuKeluarga getIdKartuKeluarga(int id) {
+		// TODO Auto-generated method stub
+		return kartukeluargaRepository.CariIdKartuKeluarga(id);
+	}
+
+	@Override
+	public KartuKeluarga updateKartuKeluarga(int id, KartuKeluarga kartukeluarga) {
+		// TODO Auto-generated method stub
+		return kartukeluargaRepository.updateKartuKeluarga(id, kartukeluarga);
+	}
+	
 	
 
 }

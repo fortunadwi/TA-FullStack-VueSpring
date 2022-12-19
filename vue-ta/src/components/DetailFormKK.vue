@@ -16,7 +16,7 @@
       <div id="kiri" class="ml-2">
         <div class="form-group col p-3">
           <label for="">Nomor Kartu Keluarga</label>
-          <input type="text" style="width:25em" readonly class="form-control" placeholder="{{}}">
+          <input type="text" style="width:25em" readonly class="form-control" value="">
         </div>
         <div class="form-group col mt-5">
           <label for="">Alamat</label>
@@ -54,12 +54,6 @@
           <label for="">Kode Pos</label>
           <input type="text" class="form-control" readonly placeholder="Kode Pos">
         </div>
-
-        <div style="margin-left:21.3em">
-		<button type="submit" id="submitdata" class="btn btn-primary mt-4">
-              Submit
-        </button>
-        </div>
 				
       </div> 
 
@@ -76,8 +70,10 @@
 </template>
 
 <script>
+import kkServices from '../services/KkServices'
+
 export default {
-    name: "FormKKComponent",
+  name: "FormKKComponent",
   data(){
     return{
       kkData: {
@@ -91,10 +87,19 @@ export default {
         "rt" : null,
         "rw" : null
       },
-      success : false,
-      buttonValue : "Submit"
+      
     }
   },
+
+  methods: {
+    selectIdKartuKeluarga(id) {
+      kkServices
+      .selectIdKK(id)
+      .then(response => {
+        this.kkData = response.data;
+      })
+    }
+  }
 };
 </script>
 

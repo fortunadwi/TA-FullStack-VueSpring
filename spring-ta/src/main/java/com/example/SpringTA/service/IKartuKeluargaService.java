@@ -12,4 +12,8 @@ public interface IKartuKeluargaService {
 
 	KartuKeluarga deleteKartuKeluarga(int id);
 
+	KartuKeluarga getIdKartuKeluarga(int id);
+
+	KartuKeluarga updateKartuKeluarga(int id, KartuKeluarga kartukeluarga);
+
 }

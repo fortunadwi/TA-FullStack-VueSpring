@@ -41,5 +41,15 @@ public class KartuKeluargaController {
 		return kartukeluargaService.deleteKartuKeluarga(id);
 	}
 	
+	@GetMapping("/getId/{id}")
+	public KartuKeluarga getIdKartuKeluarga(@PathVariable int id){
+		return kartukeluargaService.getIdKartuKeluarga(id);
+	}
+	
+	@PutMapping("/update/{id}")
+	public KartuKeluarga updateKartuKeluarga(@PathVariable int id, @RequestBody KartuKeluarga kartukeluarga) {
+		return kartukeluargaService.updateKartuKeluarga(id, kartukeluarga);
+	}
+	
 
 }

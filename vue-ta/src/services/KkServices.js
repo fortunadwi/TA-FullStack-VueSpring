@@ -16,6 +16,10 @@ class kkService {
       updateKK(id, data) {
         return http.put(`/kartukeluarga/update/${id}`, data);
       }
+
+      selectIdKK(id) {
+        return http.get(`/kartukeluarga/getId/${id}`);
+      }
 }
 
 export default new kkService();

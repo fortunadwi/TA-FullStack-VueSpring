@@ -42,4 +42,23 @@ public class KartuKeluargaRepository implements IKartuKeluargaRepository{
 		
 		return result;
 	}
+	
+	@Override
+	public KartuKeluarga CariIdKartuKeluarga(int id) {
+		String query = "SELECT * FROM tb_kartu_keluarga WHERE id = ?";
+		return jdbcTemplate.queryForObject(query, new BeanPropertyRowMapper<>(KartuKeluarga.class), id);
+	}
+
+	@Override
+	public KartuKeluarga updateKartuKeluarga(int id, KartuKeluarga kartukeluarga) {
+		// TODO Auto-generated method stub
+		String query = "UPDATE tb_kartu_keluarga SET alamat = ?, desa_kelurahan = ?, kabupaten_kota = ?, kecamatan = ?, kode_pos = ?, "
+				+ "nomor_kk = ?, provinsi = ?, rt = ?, rw = ? WHERE id = ?";
+				
+		jdbcTemplate.update(query, new Object[] {kartukeluarga.getAlamat(), kartukeluarga.getDesa_kelurahan(), kartukeluarga.getKabupaten_kota(), kartukeluarga.getKecamatan(), 
+				kartukeluarga.getKode_pos(), kartukeluarga.getNomor_kk(), kartukeluarga.getProvinsi(), kartukeluarga.getRt(), kartukeluarga.getRw(), id});
+				
+		return kartukeluarga;
+	}
+
 }

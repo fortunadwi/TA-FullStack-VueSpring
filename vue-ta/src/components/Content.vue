@@ -43,8 +43,11 @@
             <td>{{ item.alamat }}</td>
             <td>{{ item.kabupaten_kota }}</td>
             <td>{{ item.kode_pos }}</td>
+            <!-- <td>@click.prevent="$emit('updateKK, item')"</td> -->
             <td>
-              <router-link to="/DetailKK"><button class="btn-primary">Details</button></router-link>
+              <router-link :to="{ name: 'detailkk', params: { id: item.id } }">
+                <button class="btn-primary">Details</button></router-link
+              >
               <button class="btn-danger ml-3" @click="deleteKK(item.id, index)">
                 Delete
               </button>
