@@ -18,5 +18,7 @@ public interface IAnggotaKeluargaService {
 
 	List<AnggotaKeluarga> getIdKk(String id_kk);
 
+	List<AnggotaKeluarga> deleteIdKk(String id_kk);
+
 
 }

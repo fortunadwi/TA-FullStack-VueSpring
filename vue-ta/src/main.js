@@ -6,6 +6,7 @@ import Routes from "./routes"
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import 'styles/my-styles.scss'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)

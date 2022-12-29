@@ -6,12 +6,23 @@ import DetailKK from './pages/DetailKK.vue'
 import AnggotaKK from './pages/AnggotaKK.vue'
 import AddAnggotaKK from './pages/AddAnggotaKK.vue'
 import UpdateAnggota from './pages/UpdateAnggota'
+import Register from './pages/RegisForm.vue'
 
 export default [
     {
     path: "/",
     component: LoginRegister,
     },
+
+    {
+        path: "/login",
+        component: LoginRegister,
+    },
+
+    {
+        path: "/register",
+        component: Register,
+        },
 
     {
         path: "/Home",
@@ -41,7 +52,7 @@ export default [
     },
    
     {
-        path: "/:id/AnggotaKK/:ida",
+        path: "/DetailKK/:id/AnggotaKK/:ida",
         name: "detailanggotakka",
         component: UpdateAnggota,
     },

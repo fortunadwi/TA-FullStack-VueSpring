@@ -192,7 +192,7 @@ export default {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Registerasi Berhasil! Silahkan Login",
+          title: "Tambah Kartu Keluarga Berhasil !",
           timer: 2000,
           timerProgressBar: true,
         })

@@ -24,17 +24,11 @@
             </router-link>
           </li>
 
-          <li class="m-4 mt-3">
-            <a href="#"> <i class="zmdi zmdi-widgets"></i> Overview </a>
-          </li>
 
-          <li class="m-4 mt-3">
-            <a href="#"> <i class="zmdi zmdi-calendar"></i> Events </a>
-          </li>
 
-          <div class="d-flex" style="margin-top: 13rem">
+          <div class="d-flex" style="margin-top: 23rem">
             <li class="m-4 mt-3">
-              <router-link to="/Details" class="zmdi zmdi-mail-reply">
+              <router-link to="/login" class="zmdi zmdi-mail-reply">
                 &nbsp;&nbsp;&nbsp;&nbsp;Logout
               </router-link>
             </li>
@@ -92,7 +86,7 @@ body {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #37474f;
+  background: #165e3f;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

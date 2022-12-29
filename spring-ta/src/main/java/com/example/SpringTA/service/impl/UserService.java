@@ -1,5 +1,7 @@
 package com.example.SpringTA.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +19,24 @@ public class UserService implements IUserService {
 		// TODO Auto-generated method stub
 		return userRepository.insertUser(user);
 	}
+
+	@Override
+	public User loginUser(User user) {
+		// TODO Auto-generated method stub
+		return userRepository.loginUser(user);
+	}
+
+	@Override
+	public User registerUser(User user) {
+		// TODO Auto-generated method stub
+		return userRepository.registerUser(user);
+	}
+
+	@Override
+	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return userRepository.getAllUser();
+	}
+
+	
 }

@@ -49,4 +49,10 @@ public class AnggotaKeluargaService implements IAnggotaKeluargaService {
 		// TODO Auto-generated method stub
 		return anggotakeluargaRepository.getIdKk(id_kk);
 	}
+	
+	@Override
+	public List<AnggotaKeluarga> deleteIdKk(String id_kk) {
+		// TODO Auto-generated method stub
+		return anggotakeluargaRepository.deleteIdKk(id_kk);
+	}
 }

@@ -23,7 +23,7 @@
       <div class="mt-5">
         <table class="table table-hover">
           <thead>
-            <tr>
+            <tr class="table-primary">
               <th scope="col">No</th>
               <th scope="col">NIK</th>
               <th scope="col">Nama</th>
@@ -40,6 +40,7 @@
               <td>{{ item.nama }}</td>
               <td>{{ item.jenis_kelamin }}</td>
               <td>{{ item.kepala_keluarga }}</td>
+
               <td>
                 <router-link :to="{ name: 'detailanggotakka', params: { ida: item.id } }">
                   <button v-on:click="DetailButton" class="btn-primary">
@@ -53,6 +54,7 @@
             </tr>
           </tbody>
         </table>
+        <h2 class="text-center" v-if="anggotaData.length < 1">Tidak Ada Data</h2>
       </div>
     </div>
 
@@ -355,7 +357,6 @@ export default {
     },
   },
 
-  props: ["propsAnggotaKK"],
   mounted() {
     this.getByIdKk(this.$route.params.id);
     if (this.$route.name == "detailanggotakka") {
